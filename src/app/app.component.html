@@ -59,6 +59,24 @@
 
         <p>your reply: {{answer}}</p>
 
+        <div class="radio"
+              *ngFor = "let g of genders">
+              <label>
+                <input 
+                type="radio"
+                name="gender"
+                ngModel
+                [value] ="g"
+                required
+                >
+                {{g}}
+              </label>
+
+
+
+              
+        </div>
+
         <button class="btn btn-primary" 
                 type="submit"
                 [disabled]="!f.valid">
