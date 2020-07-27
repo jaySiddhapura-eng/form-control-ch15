@@ -14,6 +14,18 @@ export class AppComponent {
   answer = '';
   genders = ['male', 'female'];
 
+  // following user object holds all the inputed data 
+  // which will be use to summerize the user data after submission
+  user = {
+    username:'',
+    email:'',
+    secretQuestion:'',
+    answer:'',
+    gender:''
+  }
+
+  submitted = false;
+
 
   // onSubmit(form:NgForm){
   //   console.log(form);
@@ -21,6 +33,16 @@ export class AppComponent {
 
   onSubmit(){
     console.log(this.signupForm);
+
+    // on submission update the user object with inputed data
+    this.submitted =  true;
+    this.user.username = this.signupForm.value.userData.username;
+    this.user.email = this.signupForm.value.userData.email;
+    this.user.secretQuestion = this.signupForm.value.secret;
+    this.user.answer = this.signupForm.value.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
+
+    this.signupForm.reset();
   }
 
   // this will overwrite the entire form while setting the suggested user name
