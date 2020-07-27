@@ -15,15 +15,38 @@ export class AppComponent {
   genders = ['male', 'female'];
 
 
-  suggestUserName() {
-    const suggestedName = 'Superuser';
-  }
-
   // onSubmit(form:NgForm){
   //   console.log(form);
   // }
 
   onSubmit(){
     console.log(this.signupForm);
+  }
+
+  // this will overwrite the entire form while setting the suggested user name
+  onSetUserName(){
+    const suggestedName = 'Superuser';
+    this.signupForm.form.setValue(
+      {
+        userData:{
+          username:suggestedName,
+          email:''
+        },
+        secret:'pet',
+        questionAnswer:'',
+        gender: 'male'
+      }
+    );
+  }
+  // this will just add suggested user name in the username field without overwritting any other field
+  onPatchUserName(){
+    const suggestedName = 'SuperMan';
+    this.signupForm.form.patchValue(
+      {
+        userData:{
+          username:suggestedName
+        }
+      }
+    );
   }
 }
