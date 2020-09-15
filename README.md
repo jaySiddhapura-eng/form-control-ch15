@@ -2,7 +2,7 @@
 
 ## Table of Contents  
 * [Introduction](#Introduction)<br>
-* [Add Form Module in app.module.ts File of The Application](#Add-Form-Module-in-app.module.ts-File-of-The-Application)<br>
+* [Adding The Form Module](#Adding-The-Form-Module)<br>
 * [Registering The Input Controls](#Registering-The-Input-Controls)<br>
 * [Accessing The form Object Outside HTML](#Accessing-The-form-Object-Outside-HTML)<br>
 * [Accessing Form Control Using ViewChild](#Accessing-Form-Control-Using-ViewChild)<br>
@@ -24,7 +24,7 @@
    1. Template - Driven (TD) : In this approach Angular infers the Form object from the DOM
    2. Reactive : In this approach form is created programmatically and synchronized with DOM  
 
-## Add Form Module in app.module.ts File of The Application
+## Adding The Form Module
 
 ~~~typescript
 import { FormsModule } from '@angular/forms';
@@ -34,9 +34,10 @@ import { FormsModule } from '@angular/forms';
 })
 ~~~
 
-1. Angular generate / recognize ```<form> </form> ``` tag by itself automatically
-2. Angular basically converts the HTML Form into JSON object, Although this object is not visible by default
-3. Therefore, developer need to register control manually to inform Angular about various form controls which are presents in between form tags
+1. Adding form module in ```app.module.ts``` file of the  application
+2. Angular generate / recognize ```<form> </form> ``` tag by itself automatically
+3. Angular basically converts the HTML Form into JSON object, Although this object is not visible by default
+4. Therefore, developer need to register control manually to inform Angular about various form controls which are presents in between form tags
 
 ## Registering The Input Controls
 
