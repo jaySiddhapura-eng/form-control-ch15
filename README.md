@@ -16,6 +16,8 @@
 
 ## Introduction
 
+## 	[:arrow_up:](#Table-of-Contents )<br>
+
 1. Angular have capability to convert HTML Form into Typescript Object
 2. This converted object can hold data as well as meta data
 3. Data: Actual data obtain from input fields of HTML Form 
@@ -25,6 +27,8 @@
    2. Reactive : In this approach form is created programmatically and synchronized with DOM  
 
 ## Adding The Form Module
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 ~~~typescript
 import { FormsModule } from '@angular/forms';
@@ -40,6 +44,8 @@ import { FormsModule } from '@angular/forms';
 4. Therefore, developer need to register control manually to inform Angular about various form controls which are presents in between form tags
 
 ## Registering The Input Controls
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Adding ```ngModel``` and ```name``` to all the inputs which we need to register with Angular 
 
@@ -67,6 +73,8 @@ import { FormsModule } from '@angular/forms';
 4. ```onSubmit()``` is implemented in corresponding .ts file
 
 ## Accessing The form Object Outside HTML
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. This task can be achieve by creating form reference and then passing this reference to the ```onSubmit``` method as a parameter
 
@@ -103,6 +111,8 @@ import { FormsModule } from '@angular/forms';
 
 ## Accessing Form Control Using ViewChild
 
+## 	[:arrow_up:](#Table-of-Contents )<br>
+
 1. When we pass the form reference into the submitting method, the data of form will be available to the .ts file only when this method get executed. In other word the form data available to the .ts only after it get submitted
 
 2. Although the form data can be passed to the .ts file even before the submitting the form
@@ -132,6 +142,8 @@ import { FormsModule } from '@angular/forms';
    ~~~
 
 ## Adding Validators
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Validators are basically a rules which check the validity of user input in form control
 
@@ -164,6 +176,8 @@ import { FormsModule } from '@angular/forms';
 8. Multiple ```valid``` tags are available at different levels in form object
 
 ## Accessing Form State 
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Disable the submit button on invalid input
 
@@ -230,6 +244,8 @@ import { FormsModule } from '@angular/forms';
 
 ## NgModel with Two Way Binding
 
+## 	[:arrow_up:](#Table-of-Contents )<br>
+
 1. Three option for using ```ngModel``` in the form
 
    1. No binding : ```"ngModel"```
@@ -256,6 +272,8 @@ import { FormsModule } from '@angular/forms';
 
 ## Grouping Form Control
 
+## 	[:arrow_up:](#Table-of-Contents )<br>
+
 ~~~html
 <form (ngSubmit) = "onSubmit()" #f = "ngForm">
         <div id="user-data" 
@@ -273,6 +291,8 @@ import { FormsModule } from '@angular/forms';
 ~~~
 
 ## Adding Radio Button
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 ~~~html
 <!--app.component.html-->
@@ -342,6 +362,8 @@ Set value / Patch value
 
 ## Show Back The Submitted Data
 
+## 	[:arrow_up:](#Table-of-Contents )<br>
+
 1. Store the data which arrived from form control into the local properties of .ts file
 
    ~~~typescript
@@ -386,6 +408,8 @@ Set value / Patch value
    ~~~
 
 ## Resetting The Form
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. After successful submission of the form, it must resets, means all the input data and meta data of form should be reset
 
