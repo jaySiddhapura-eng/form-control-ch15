@@ -1,5 +1,19 @@
 # Template Driven Form Control
 
+## Table of Contents  
+* [Introduction](#Introduction)<br>
+* [Add Form Module in app.module.ts File of The Application](#Add-Form-Module-in-app.module.ts-File-of-The-Application)<br>
+* [Registering The Input Controls](#Registering-The-Input-Controls)<br>
+* [Accessing The form Object Outside HTML](#Accessing-The-form-Object-Outside-HTML)<br>
+* [Accessing Form Control Using ViewChild](#Accessing-Form-Control-Using-ViewChild)<br>
+* [Adding Validators](#Adding-Validators)<br>
+* [Accessing Form State](#Accessing-Form-State)<br>
+* [NgModel with Two Way Binding](#NgModel-with-Two-Way-Binding)<br>
+* [Grouping Form Control](#Grouping-Form-Control)<br>
+* [Adding Radio Button](#Adding-Radio-Button)<br>
+* [Show Back The Submitted Data](#Show-Back-The-Submitted-Data)<br>
+* [Resetting The Form](#Resetting-The-Form)<br>
+
 ## Introduction
 
 1. Angular have capability to convert HTML Form into Typescript Object
@@ -10,7 +24,7 @@
    1. Template - Driven (TD) : In this approach Angular infers the Form object from the DOM
    2. Reactive : In this approach form is created programmatically and synchronized with DOM  
 
-## Add Form module in app.module.ts file of the Application
+## Add Form Module in app.module.ts File of The Application
 
 ~~~typescript
 import { FormsModule } from '@angular/forms';
@@ -24,7 +38,7 @@ import { FormsModule } from '@angular/forms';
 2. Angular basically converts the HTML Form into JSON object, Although this object is not visible by default
 3. Therefore, developer need to register control manually to inform Angular about various form controls which are presents in between form tags
 
-## Registering the Input Controls
+## Registering The Input Controls
 
 1. Adding ```ngModel``` and ```name``` to all the inputs which we need to register with Angular 
 
@@ -51,7 +65,7 @@ import { FormsModule } from '@angular/forms';
 
 4. ```onSubmit()``` is implemented in corresponding .ts file
 
-## Accessing the form Object Outside HTML
+## Accessing The form Object Outside HTML
 
 1. This task can be achieve by creating form reference and then passing this reference to the ```onSubmit``` method as a parameter
 
@@ -86,7 +100,7 @@ import { FormsModule } from '@angular/forms';
    3. submitted: whether form is submitted
    4. touched/untouched: whether user click on any of the input field
 
-## Accessing Form Control using ViewChild
+## Accessing Form Control Using ViewChild
 
 1. When we pass the form reference into the submitting method, the data of form will be available to the .ts file only when this method get executed. In other word the form data available to the .ts only after it get submitted
 
@@ -148,7 +162,7 @@ import { FormsModule } from '@angular/forms';
 
 8. Multiple ```valid``` tags are available at different levels in form object
 
-## Accessing form State 
+## Accessing Form State 
 
 1. Disable the submit button on invalid input
 
@@ -213,7 +227,7 @@ import { FormsModule } from '@angular/forms';
            </div>
    ~~~
 
-## NgModel with Two-way Binding
+## NgModel with Two Way Binding
 
 1. Three option for using ```ngModel``` in the form
 
@@ -239,7 +253,7 @@ import { FormsModule } from '@angular/forms';
    </p>
    ~~~
 
-## Grouping Form-Control
+## Grouping Form Control
 
 ~~~html
 <form (ngSubmit) = "onSubmit()" #f = "ngForm">
@@ -325,7 +339,7 @@ Set value / Patch value
    // only username will be modified with the new value, where as other fields will remain unmodified
    ~~~
 
-## Show back the Submitted Data
+## Show Back The Submitted Data
 
 1. Store the data which arrived from form control into the local properties of .ts file
 
@@ -370,7 +384,7 @@ Set value / Patch value
      </div>
    ~~~
 
-## Resetting the Form
+## Resetting The Form
 
 1. After successful submission of the form, it must resets, means all the input data and meta data of form should be reset
 
